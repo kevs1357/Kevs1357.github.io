@@ -1,0 +1,15 @@
+/* Tipografía base */
+body {
+  font-family: Inter, system-ui, sans-serif;
+}
+
+/* Evita scroll raro en móviles */
+html, body {
+  scroll-behavior: smooth;
+}
+
+/* Helpers opcionales */
+.section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
