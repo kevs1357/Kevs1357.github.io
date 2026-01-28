@@ -29,15 +29,40 @@
   <link rel="stylesheet" href="css/base.css">
 </head>
 
-<body class="bg-dark text-white">
     <script src="js/main.js"></script>
 
 <!-- ================= LAYOUT ROOT ================= -->
 
+  <style>
+    /* Cortes diagonales de la sección */
+    .diagonal-top {
+      clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 70%,
+        0 100%
+      );
+    }
+
+    .diagonal-bottom {
+      clip-path: polygon(
+        0 30%,
+        100% 0,
+        100% 100%,
+        0 100%
+      );
+    }
+  </style>
+</head>
+
+<body class="bg-dark text-white">
+    <script src="js/main.js"></script>
+
+<!-- ================= LAYOUT ROOT ================= -->
 <div class="min-h-screen flex flex-col">
 
   <!-- HEADER / TOP -->
-  <header class="h-14 flex items-center px-4">
+  <header class="h-14 flex items-center px-4 bg-[#0B0B0E]">
     <div id="sidebar"></div>
   </header>
 
@@ -51,32 +76,33 @@
 
     <!-- MAIN CONTENT -->
     <main class="flex-1 p-4">
-      <!-- HERO / FEATURES / ETC -->
+
+      <!-- CONTENIDO PRINCIPAL -->
+      <h1 class="text-xl font-bold mb-8">KevsContenido</h1>
 
       <!-- DIAGONAL SECTION (WHITE CONTENT) -->
-<section class="relative bg-slate-100 overflow-hidden text-slate-900">
+      <section class="relative bg-slate-100 overflow-hidden text-slate-900">
 
-  <!-- Separador negro superior -->
-  <div class="absolute top-0 left-0 w-full h-40 bg-[#0B0B0E] diagonal-top"></div>
+        <!-- Separador negro superior -->
+        <div class="absolute top-0 left-0 w-full h-40 bg-[#0B0B0E] diagonal-top"></div>
 
-  <!-- CONTENIDO (esto puede crecer libremente) -->
-  <div class="relative max-w-screen-xl mx-auto px-4 py-32">
-    <h2 class="text-3xl font-bold mb-6">
-      Project Zenji
-    </h2>
+        <!-- CONTENIDO (esto puede crecer libremente) -->
+        <div class="relative max-w-screen-xl mx-auto px-4 py-32">
+          <h2 class="text-3xl font-bold mb-6">
+            Project Zenji
+          </h2>
 
-    <p class="max-w-2xl text-slate-700">
-      Aquí puedes colocar texto, imágenes o un video promocional.
-      Este contenedor puede crecer sin romper el corte diagonal.
-    </p>
-  </div>
+          <p class="max-w-2xl text-slate-700">
+            Aquí puedes colocar texto, imágenes o un video promocional.
+            Este contenedor puede crecer sin romper el corte diagonal.
+          </p>
+        </div>
 
-  <!-- Separador negro inferior -->
-  <div class="absolute bottom-0 left-0 w-full h-40 bg-[#0B0B0E] diagonal-bottom"></div>
+        <!-- Separador negro inferior -->
+        <div class="absolute bottom-0 left-0 w-full h-40 bg-[#0B0B0E] diagonal-bottom"></div>
 
-</section>
-      
-      <h1 class="text-xl font-bold">KevsContenido</h1>
+      </section>
+
     </main>
 
     <!-- RIGHT (DESKTOP ONLY) -->
@@ -86,22 +112,26 @@
 
   </div>
 
+  <!-- DIAGONAL FOOTER SEPARATOR SVG (mejor calidad que clip-path para full width) -->
+  <div class="w-full leading-none">
+    <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="w-full h-32">
+      <polygon points="0,0 100,0 100,60 0,100" fill="#0B0B0E" />
+    </svg>
+  </div>
+
   <!-- FOOTER / BOTTOM -->
-<footer class="bg-[#0B0B0E] text-slate-200">
-  <div id="footer"></div>
-</footer>
+  <footer class="bg-[#0B0B0E] text-slate-200">
+    <div id="footer"></div>
+  </footer>
 
 </div>
 
 <!-- =============================================== -->
-
 <script>
   injectComponent("sidebar", "components/sidebar.html");
   injectComponent("footer", "components/footer.html");
 </script>
-
 <!-- ============================================ -->
 
-  <!-- JS base -->
 </body>
 </html>
