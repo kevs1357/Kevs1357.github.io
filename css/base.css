@@ -13,3 +13,22 @@ html, body {
   padding-top: 6rem;
   padding-bottom: 6rem;
 }
+
+/* Cortes diagonales (separadores de sección) */
+.diagonal-top {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 70%,
+    0 100%
+  );
+}
+
+.diagonal-bottom {
+  clip-path: polygon(
+    0 30%,
+    100% 0,
+    100% 100%,
+    0 100%
+  );
+}
