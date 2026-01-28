@@ -29,104 +29,55 @@
   <link rel="stylesheet" href="css/base.css">
 </head>
 
-    <script src="js/main.js"></script>
-
-<!-- ================= LAYOUT ROOT ================= -->
-
-  <style>
-    /* Cortes diagonales de la sección */
-    .diagonal-top {
-      clip-path: polygon(
-        0 0,
-        100% 0,
-        100% 70%,
-        0 100%
-      );
-    }
-
-    .diagonal-bottom {
-      clip-path: polygon(
-        0 30%,
-        100% 0,
-        100% 100%,
-        0 100%
-      );
-    }
-  </style>
-</head>
-
 <body class="bg-dark text-white">
-    <script src="js/main.js"></script>
+  <script src="js/main.js"></script>
 
 <!-- ================= LAYOUT ROOT ================= -->
+<body class="bg-[#0B0B0E] text-white">
+
 <div class="min-h-screen flex flex-col">
 
   <!-- HEADER / TOP -->
   <header class="h-14 flex items-center px-4 bg-[#0B0B0E]">
-   <!-- <div id="sidebar"></div> -->
+    <!-- Optional content -->
   </header>
 
-  <!-- BODY AREA -->
-  <div class="flex flex-1">
+  <!-- MAIN CONTENT -->
+  <main class="flex-1 relative">
 
-    <!-- LEFT (DESKTOP ONLY) -->
-    <aside class="hidden md:block w-64 p-4">
-      <!-- sidebar opcional -->
-    </aside>
+    <!-- TRIÁNGULO SUPERIOR -->
+    <div class="absolute top-0 left-0 w-full overflow-hidden leading-none h-32">
+      <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="w-full h-full">
+        <polygon points="0,100 50,0 100,100" fill="#0B0B0E" />
+      </svg>
+    </div>
 
-    <!-- MAIN CONTENT -->
-    <main class="flex-1 p-4">
+    <!-- SECCIÓN BLANCA -->
+    <section class="relative bg-white text-slate-900 z-10">
+      <div class="max-w-screen-xl mx-auto px-4 py-32">
+        <h2 class="text-3xl font-bold mb-6">Project Zenji</h2>
+        <p class="max-w-2xl text-slate-700">
+          Aquí puedes colocar texto, imágenes o un video promocional.
+        </p>
+      </div>
+    </section>
 
-      <!-- CONTENIDO PRINCIPAL -->
-      <h1 class="text-xl font-bold mb-8">KevsContenido</h1>
+    <!-- TRIÁNGULO INFERIOR -->
+    <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none h-32">
+      <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="w-full h-full">
+        <polygon points="0,0 50,100 100,0" fill="#0B0B0E" />
+      </svg>
+    </div>
 
-      <!-- DIAGONAL SECTION (WHITE CONTENT) -->
-      <section class="relative bg-slate-100 overflow-hidden text-slate-900">
+  </main>
 
-        <!-- Separador negro superior -->
-        <div class="absolute top-0 left-0 w-full h-40 bg-[#0B0B0E] diagonal-top"></div>
-
-        <!-- CONTENIDO (esto puede crecer libremente) -->
-        <div class="relative max-w-screen-xl mx-auto px-4 py-32">
-          <h2 class="text-3xl font-bold mb-6">
-            Project Zenji
-          </h2>
-
-          <p class="max-w-2xl text-slate-700">
-            Aquí puedes colocar texto, imágenes o un video promocional.
-            Este contenedor puede crecer sin romper el corte diagonal.
-          </p>
-        </div>
-
-        <!-- Separador negro inferior -->
-        <div class="absolute bottom-0 left-0 w-full h-40 bg-[#0B0B0E] diagonal-bottom"></div>
-
-      </section>
-
-    </main>
-
-    <!-- RIGHT (DESKTOP ONLY) -->
-    <aside class="hidden lg:block w-64 p-4">
-      <!-- panel derecho opcional -->
-    </aside>
-
-  </div>
-
-  <!-- DIAGONAL FOOTER SEPARATOR SVG (mejor calidad que clip-path para full width) -->
-  <div class="w-full leading-none">
-    <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="w-full h-32">
-      <polygon points="0,0 100,0 100,60 0,100" fill="#0B0B0E" />
-    </svg>
-  </div>
-
-  <!-- FOOTER / BOTTOM -->
-  <footer class="bg-[#0B0B0E] text-slate-200">
+  <!-- FOOTER -->
+  <footer class="bg-[#0B0B0E] text-slate-200 p-6">
     <div id="footer"></div>
   </footer>
 
 </div>
-
-<!-- =============================================== -->
+  
 <script>
   injectComponent("sidebar", "components/sidebar.html");
   injectComponent("footer", "components/footer.html");
