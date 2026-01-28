@@ -32,3 +32,8 @@ html, body {
     0 100%
   );
 }
+
+svg polygon {
+  transform: scaleY(0.4); /* 0.4 = aplastado vertical */
+  transform-origin: center;
+}
