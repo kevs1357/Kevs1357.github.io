@@ -33,6 +33,10 @@
   <script src="js/main.js"></script>
 
 <!-- ================= LAYOUT ROOT ================= -->
+ <footer class="bg-[#0B0B0E]">
+    <div id="blog"></div> <!-- Aquí se inyecta tu componente -->
+  </footer>
+
   <main class="flex-1">
     <div class="max-w-screen-xl mx-auto px-4 py-8 bg-white text-slate-900">
       <h1 class="text-xl font-bold mb-2">KevsContenido</h1>
@@ -53,6 +57,7 @@
 </div>
   
 <script>
+  injectComponent("blog", "components/blog.html");
   injectComponent("sidebar", "components/sidebar.html");
   injectComponent("footer", "components/footer.html");
 </script>
