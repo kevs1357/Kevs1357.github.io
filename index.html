@@ -38,24 +38,22 @@
 <div class="min-h-screen flex flex-col">
 
   <!-- HEADER / TOP -->
-  <header class="h-14 flex items-center px-4 bg-[#0B0B0E]">
-    <!-- Contenido superior duplicado -->
-    <div class="text-center w-full">
-      <h1 class="text-xl font-bold mb-2">KevsContenido</h1>
-      <p class="text-sm text-slate-400">Aquí puedes colocar texto, imágenes o video.</p>
-    </div>
-  </header>
+<header class="relative h-14 flex items-center px-4 bg-[#0B0B0E]">
+  <div class="text-center w-full">
+    <h1 class="text-xl font-bold mb-2">KevsContenido</h1>
+    <p class="text-sm text-slate-400">Aquí puedes colocar texto, imágenes o video.</p>
+  </div>
 
   <!-- MAIN CONTENT -->
   <main class="flex-1 relative">
 
-    <!-- TRIÁNGULO SUPERIOR -->
-    <div class="absolute top-0 left-0 w-full overflow-hidden h-32 z-0">
-      <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="w-full h-full">
-        <!-- Triángulo medio-diagonal divertido -->
-        <polygon points="0,0 0,80 100,0" fill="#0B0B0E" />
-      </svg>
-    </div>
+    <!-- TRIÁNGULO SUPERIOR pegado al header -->
+  <div class="w-full overflow-hidden h-16">
+    <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="w-full h-full">
+      <polygon points="0,100 50,0 100,100" fill="#0B0B0E" />
+    </svg>
+  </div>
+</header>
 
     <!-- SECCIÓN BLANCA CENTRAL -->
 <section class="relative bg-white text-slate-900">
